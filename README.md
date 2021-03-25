@@ -45,9 +45,7 @@ Running your own JackTrip server requires opening the appropriate UDP ports, and
 
 ## Context
 
-Having control over one's individual monitor mix is crucial in many kinds of music performance. Many excellent low latency networked music apps already provide individual monitoring capabilities for small groups, including [Sonobus](https://sonobus.net), [Jamulus](https://jamulus.io), [Soundjack](), [Netty McNetface](http://msp.ucsd.edu/tools/quacktrip/) and [Quaxtrip](https://github.com/damonholzborn/Quaxtrip).
-
-Similar functionality will likely be integrated into JackTrip servers someday, but is not available yet, so I made these patches as a simple prototype and temporary solution. The goals include:
+Having control over one's individual monitor mix is crucial in many kinds of music performance. Many excellent low latency networked music apps already provide individual monitoring capabilities for small groups, including [Sonobus](https://sonobus.net), [Jamulus](https://jamulus.io), [Soundjack](), [Netty McNetface](http://msp.ucsd.edu/tools/quacktrip/) and [Quaxtrip](https://github.com/damonholzborn/Quaxtrip). Similar functionality will likely be integrated into JackTrip servers someday, but is not available yet, so I made these patches as a simple prototype and temporary solution. The goals include:
 
 * supporting both [Virtual Studio devices](https://www.jacktrip.org/studio.html) and command-line JackTrip clients
 * individual monitor mixes that players can control remotely without increasing their bandwidth requirements (i.e. they receive a stereo mix, not multiple channels)
