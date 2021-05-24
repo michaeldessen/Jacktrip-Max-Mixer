@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"openrect" : [ 49.0, 234.0, 505.0, 696.0 ],
+		"openrect" : [ 49.0, 234.0, 504.0, 696.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -31,7 +31,7 @@
 		"boxanimatetime" : 200,
 		"enablehscroll" : 1,
 		"enablevscroll" : 1,
-		"devicewidth" : 505.0,
+		"devicewidth" : 504.0,
 		"description" : "",
 		"digest" : "",
 		"tags" : "",
@@ -532,7 +532,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1390.643055246140648, 773.468667309284228, 235.0, 100.0 ],
-					"text" : "This simply sends all mono player inputs back back out to the flat mix client monitor send (see routing notes) so that the talkback-client (producer) can monitor the standard low latency receives (i.e. without having to listen in on a particular client mix)",
+					"text" : "This simply sends all mono player inputs back out to the flat mix client monitor send (see routing notes) so that the talkback-client (producer) can monitor the standard low latency receives (i.e. without having to listen in on a particular client mix)",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"textjustification" : 1
 				}
@@ -1068,7 +1068,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 505.0, 670.0 ],
+						"rect" : [ 0.0, 26.0, 503.0, 696.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1101,11 +1101,11 @@
 								"box" : 								{
 									"fontface" : 0,
 									"id" : "obj-11",
-									"linecount" : 29,
+									"linecount" : 30,
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 15.856852650642395, 501.0, 501.0, 409.0 ],
+									"patching_rect" : [ 2.856852650642395, 499.0, 475.0, 422.0 ],
 									"text" : "In addition to the monitor mixes sent to each player, the patch also enables the producer to send out (typically to themselves) two different master mixes:\n\n1. A standard, low latency mix of flat player levels, in order to monitor the audio quality the players are hearing\n\n2. A concert \"broadcast\" mix using the new jitter buffer feature introduced in JackTrip v1.3, in order to send a mix to an online audience with several hundred milliseconds latency, but clean sound and ensemble synchrony identical to what the players are experiencing.\n\nTo receive both mixes simultaneously, the producer can make a 4-channel connection when connecting as client, e.g.: jacktrip -C <IP> -n4\n\nAn example of JackTrip command to use on the server to enable the new jitter buffer feature is the following:\n\njacktrip -S -p5 -q9 -broadcast 250\n\n--broadcast 200: The --broadcast argument creates an additional pair of receive ports for each client, labelled \"broadcast_1\" and \"broadcast_2\", which in this case would process the client audio using a jitter buffer of 200ms.\n\n-p5: This is a hub server mode argument that indicates no auto-patching, useful here so that when clients connect, they are not auto-patched in any way that would overlay unintended routing.\n\n-q9: This server argument sets the server queue to 9, which might be a good compromise between latency/quality.\n\n"
 								}
 
@@ -1118,7 +1118,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 15.856852650642395, 8.0, 500.0, 33.0 ],
+									"patching_rect" : [ 2.856852650642395, 6.0, 474.0, 33.0 ],
 									"text" : "This patch is intended for use on a macOS JackTrip server running in hub mode. Installation and basic setup notes are in the \"README.md\" file."
 								}
 
@@ -1131,7 +1131,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 15.856852650642395, 316.0, 500.0, 154.0 ],
+									"patching_rect" : [ 2.856852650642395, 314.0, 474.0, 154.0 ],
 									"text" : "If players will be controlling their own mixes remotely, the following UDP ports need to be open on the server, in order to receive data from the players' patches:\n\nmixA - player1 - port 30\nmixB - player2 - port 31\nmixC - player3 - port 32\nmixD - player4 - port 32\nmixE - player5 - port 32\nmixF - player6 - port 35\n\nIn the players' patch, these are specified in the \"setup.txt\" file. "
 								}
 
@@ -1144,7 +1144,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 15.856852650642395, 294.0, 500.0, 20.0 ],
+									"patching_rect" : [ 2.856852650642395, 292.0, 474.0, 20.0 ],
 									"text" : "Port forwarding setup"
 								}
 
@@ -1157,7 +1157,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 15.856852650642395, 479.0, 500.0, 20.0 ],
+									"patching_rect" : [ 2.856852650642395, 477.0, 474.0, 20.0 ],
 									"text" : "Producer mixes and the --broadcast argument"
 								}
 
@@ -1170,7 +1170,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 15.856852650642395, 69.0, 506.0, 208.0 ],
+									"patching_rect" : [ 2.856852650642395, 67.0, 474.0, 208.0 ],
 									"text" : "The \"routing notes\" assume that the producer is managing the server remotely and connecting to it as a JackTrip client, and that on the server, both Max and JACK use Soundflower 64 as an input/output audio device. \n\nIf you instead wish to use  an audio interface connected to the server machine for audio input/output, you can create an Aggregate Audio Device (in Audio Midi Setup) that uses your interface ins/outs first, followed by Soundflower 64, and use that Aggregate Device in JACK while using only Soundflower alone in Max. You would then need to adjust the numbers listed in the routing notes tab here accordingly. For example, if your interface has 2 ins and 2 outs, then in this scenario you would add the number 2 to each of the \"capture\" and \"playback\" numbers listed there, because the Aggregate device's input (capture) 3 would correspond to Soundflower channel 1 (adc~ 1 in Max).\n\nImportant reminder: When using Soundflower or any other virtual audio device, avoid using the same channel for both input and output, because this will create a loop."
 								}
 
@@ -1183,7 +1183,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 15.856852650642395, 45.0, 500.0, 20.0 ],
+									"patching_rect" : [ 2.856852650642395, 43.0, 474.0, 20.0 ],
 									"text" : "Audio devices setup"
 								}
 
@@ -1702,7 +1702,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 505.0, 670.0 ],
+						"rect" : [ 0.0, 26.0, 503.0, 696.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
@@ -1746,7 +1746,7 @@
 									"parameter_enable" : 1,
 									"patching_rect" : [ 814.231921911239624, 1561.891952023506292, 79.0, 26.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 459.749970095498156, 238.207235487677877, 68.0, 26.0 ],
+									"presentation_rect" : [ 390.749970095498156, 238.207235487677877, 68.0, 26.0 ],
 									"relative" : 1,
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
@@ -1784,7 +1784,7 @@
 									"parameter_enable" : 1,
 									"patching_rect" : [ 830.231921911239624, 1310.391952023506292, 79.0, 26.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 459.749970095498156, 196.689644588930008, 68.0, 26.0 ],
+									"presentation_rect" : [ 390.749970095498156, 196.689644588930008, 68.0, 26.0 ],
 									"relative" : 1,
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
@@ -1822,7 +1822,7 @@
 									"parameter_enable" : 1,
 									"patching_rect" : [ 814.231921911239624, 1033.891952023506292, 79.0, 26.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 459.749970095498156, 155.172053690182111, 68.0, 26.0 ],
+									"presentation_rect" : [ 390.749970095498156, 155.172053690182111, 68.0, 26.0 ],
 									"relative" : 1,
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
@@ -1860,7 +1860,7 @@
 									"parameter_enable" : 1,
 									"patching_rect" : [ 802.881444454193115, 728.391952023506292, 79.0, 26.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 459.749970095498156, 113.654462791434227, 68.0, 26.0 ],
+									"presentation_rect" : [ 390.749970095498156, 113.654462791434227, 68.0, 26.0 ],
 									"relative" : 1,
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
@@ -1898,7 +1898,7 @@
 									"parameter_enable" : 1,
 									"patching_rect" : [ 802.881444454193115, 496.290681600570679, 79.0, 26.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 459.749970095498156, 72.136871892686344, 68.0, 26.0 ],
+									"presentation_rect" : [ 390.749970095498156, 72.136871892686344, 68.0, 26.0 ],
 									"relative" : 1,
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
@@ -1936,7 +1936,7 @@
 									"parameter_enable" : 1,
 									"patching_rect" : [ 773.749970095498156, 202.336079835891724, 79.0, 26.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 459.749970095498156, 30.619280993938446, 68.0, 26.0 ],
+									"presentation_rect" : [ 390.749970095498156, 30.619280993938446, 68.0, 26.0 ],
 									"relative" : 1,
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
@@ -2000,7 +2000,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 657.231921911239624, 1583.160549416541926, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 384.401915201881991, 228.22766707897199, 69.0, 39.0 ],
+									"presentation_rect" : [ 331.252238536116124, 228.22766707897199, 56.0, 39.0 ],
 									"varname" : "AudioReceive[6]",
 									"viewvisibility" : 1
 								}
@@ -2047,7 +2047,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 661.231921911239624, 1320.913351655006409, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 384.231900563624492, 184.651518642902374, 69.0, 39.0 ],
+									"presentation_rect" : [ 331.103897827204719, 184.651518642902374, 56.0, 39.0 ],
 									"varname" : "AudioReceive[5]",
 									"viewvisibility" : 1
 								}
@@ -2094,7 +2094,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 645.881444454193115, 1007.891952023506292, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 385.476684373311969, 141.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 329.684677214315627, 141.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioReceive[4]",
 									"viewvisibility" : 1
 								}
@@ -2154,7 +2154,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 549.018022060394287, 1555.391952023506292, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 321.049706049544511, 228.22766707897199, 69.0, 39.0 ],
+									"presentation_rect" : [ 276.758308828072927, 228.22766707897199, 56.0, 39.0 ],
 									"varname" : "AudioSendC6[3]",
 									"viewvisibility" : 1
 								}
@@ -2178,7 +2178,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 460.358233213424683, 1554.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 257.697496897206975, 228.22766707897199, 69.0, 39.0 ],
+									"presentation_rect" : [ 222.26437912002973, 228.22766707897199, 56.0, 39.0 ],
 									"varname" : "AudioSendC5[3]",
 									"viewvisibility" : 1
 								}
@@ -2202,7 +2202,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 374.791227698326111, 1554.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 194.345287744869523, 228.22766707897199, 69.0, 39.0 ],
+									"presentation_rect" : [ 167.77044941198659, 228.22766707897199, 56.000000000000028, 39.0 ],
 									"varname" : "AudioSendC4[3]",
 									"viewvisibility" : 1
 								}
@@ -2226,7 +2226,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 277.884016633033752, 1554.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 130.993078592532015, 228.22766707897199, 69.0, 39.0 ],
+									"presentation_rect" : [ 113.276519703943393, 228.22766707897199, 56.0, 39.0 ],
 									"varname" : "AudioSendC3[3]",
 									"viewvisibility" : 1
 								}
@@ -2250,7 +2250,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 186.131444454193115, 1554.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 67.640869440194535, 228.22766707897199, 69.0, 39.0 ],
+									"presentation_rect" : [ 58.782589995900224, 228.22766707897199, 56.0, 39.0 ],
 									"varname" : "AudioSendC2[3]",
 									"viewvisibility" : 1
 								}
@@ -2285,7 +2285,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 97.881444454193115, 1554.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 4.288660287857056, 228.22766707897199, 69.0, 39.0 ],
+									"presentation_rect" : [ 4.288660287857056, 228.22766707897199, 56.0, 39.0 ],
 									"varname" : "AudioSendC1[3]",
 									"viewvisibility" : 1
 								}
@@ -2345,7 +2345,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 545.018022060394287, 1297.391952023506292, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 321.241360517663338, 184.651518642902374, 69.0, 39.0 ],
+									"presentation_rect" : [ 276.968024903980108, 184.651518642902374, 56.0, 39.0 ],
 									"varname" : "AudioSendC6[2]",
 									"viewvisibility" : 1
 								}
@@ -2369,7 +2369,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 456.358233213424683, 1296.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 258.250820471702013, 184.651518642902374, 69.0, 39.0 ],
+									"presentation_rect" : [ 222.832151980755526, 184.651518642902374, 56.0, 39.0 ],
 									"varname" : "AudioSendC5[2]",
 									"viewvisibility" : 1
 								}
@@ -2393,7 +2393,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 370.791227698326111, 1296.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 195.260280425740802, 184.651518642902374, 69.0, 39.0 ],
+									"presentation_rect" : [ 168.696279057530916, 184.651518642902374, 56.0, 39.0 ],
 									"varname" : "AudioSendC4[2]",
 									"viewvisibility" : 1
 								}
@@ -2417,7 +2417,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 273.884016633033752, 1296.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 132.269740379779535, 184.651518642902374, 69.0, 39.0 ],
+									"presentation_rect" : [ 114.560406134306291, 184.651518642902374, 56.0, 39.0 ],
 									"varname" : "AudioSendC3[2]",
 									"viewvisibility" : 1
 								}
@@ -2441,7 +2441,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 182.131444454193115, 1296.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 69.279200333818295, 184.651518642902374, 69.0, 39.0 ],
+									"presentation_rect" : [ 60.424533211081673, 184.651518642902374, 56.0, 39.0 ],
 									"varname" : "AudioSendC2[2]",
 									"viewvisibility" : 1
 								}
@@ -2476,7 +2476,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 93.881444454193115, 1296.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 6.288660287857056, 184.651518642902374, 69.0, 39.0 ],
+									"presentation_rect" : [ 6.288660287857056, 184.651518642902374, 56.0, 39.0 ],
 									"varname" : "AudioSendC1[2]",
 									"viewvisibility" : 1
 								}
@@ -2536,7 +2536,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 537.018022060394287, 1014.391952023506292, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 322.035425317954378, 141.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 275.542086018790769, 141.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendC6[1]",
 									"viewvisibility" : 1
 								}
@@ -2560,7 +2560,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 448.358233213424683, 1013.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 258.594166262596787, 141.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 221.399494823265854, 141.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendC5[1]",
 									"viewvisibility" : 1
 								}
@@ -2584,7 +2584,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 362.791227698326111, 1013.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 195.152907207239224, 141.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 167.256903627741025, 141.654470458030573, 55.999999999999972, 39.0 ],
 									"varname" : "AudioSendC4[1]",
 									"viewvisibility" : 1
 								}
@@ -2608,7 +2608,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 265.884016633033752, 1013.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 131.711648151881604, 141.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 113.114312432216138, 141.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendC3[1]",
 									"viewvisibility" : 1
 								}
@@ -2632,7 +2632,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 174.131444454193115, 1013.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 68.270389096524013, 141.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 58.97172123669128, 141.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendC2[1]",
 									"viewvisibility" : 1
 								}
@@ -2667,7 +2667,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 85.881444454193115, 1013.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 4.829130041166422, 141.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 4.829130041166422, 141.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendC1[1]",
 									"viewvisibility" : 1
 								}
@@ -2844,7 +2844,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 537.018022060394287, 728.391952023506292, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 323.025425715542667, 100.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 275.060030297488595, 100.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendC6",
 									"viewvisibility" : 1
 								}
@@ -2868,7 +2868,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 535.018022060394287, 466.944324254989624, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 322.30956104561335, 59.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 275.084533606456887, 59.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendB6",
 									"viewvisibility" : 1
 								}
@@ -2892,7 +2892,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 539.018022060394287, 186.336079835891724, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 322.960865699544399, 18.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 274.29298416410046, 18.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendA6",
 									"viewvisibility" : 1
 								}
@@ -2916,7 +2916,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 448.358233213424683, 727.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 259.386166580667407, 100.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 221.013850246224138, 100.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendC5",
 									"viewvisibility" : 1
 								}
@@ -2940,7 +2940,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 446.358233213424683, 466.068035364151001, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 258.813474844723942, 59.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 221.03345289339876, 59.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendB5",
 									"viewvisibility" : 1
 								}
@@ -2964,7 +2964,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 450.358233213424683, 185.459790945053101, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 259.568692559635565, 18.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 220.634387331280379, 18.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendA5",
 									"viewvisibility" : 1
 								}
@@ -2988,7 +2988,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 362.791227698326111, 727.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 195.746907445792175, 100.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 166.967670194959709, 100.654470458030573, 56.000000000000028, 39.0 ],
 									"varname" : "AudioSendC4",
 									"viewvisibility" : 1
 								}
@@ -3012,7 +3012,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 360.791227698326111, 466.068035364151001, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 195.31738864383459, 59.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 166.982372180340747, 59.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendB4",
 									"viewvisibility" : 1
 								}
@@ -3036,7 +3036,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 364.791227698326111, 185.459790945053101, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 196.176519419726617, 18.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 166.97579049846027, 18.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendA4",
 									"viewvisibility" : 1
 								}
@@ -3060,7 +3060,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 265.884016633033752, 727.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 132.107648310916915, 100.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 112.92149014369528, 100.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendC3",
 									"viewvisibility" : 1
 								}
@@ -3084,7 +3084,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 263.884016633033752, 466.068035364151001, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 131.821302442945239, 59.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 112.931291467282605, 59.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendB3",
 									"viewvisibility" : 1
 								}
@@ -3108,7 +3108,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 267.884016633033752, 185.459790945053101, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 132.784346279817782, 18.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 113.31719366564019, 18.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendA3",
 									"viewvisibility" : 1
 								}
@@ -3132,7 +3132,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 174.131444454193115, 727.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 68.468389176041669, 100.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 58.875310092430851, 100.654470458030573, 56.000000000000014, 39.0 ],
 									"varname" : "AudioSendC2",
 									"viewvisibility" : 1
 								}
@@ -3156,7 +3156,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 172.131444454193115, 466.068035364151001, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 68.325216242055816, 59.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 58.880210754224514, 59.654470458030573, 56.000000000000014, 39.0 ],
 									"varname" : "AudioSendB2",
 									"viewvisibility" : 1
 								}
@@ -3180,7 +3180,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 176.131444454193115, 185.459790945053101, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 69.392173139908891, 18.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 59.658596832820095, 18.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendA2",
 									"viewvisibility" : 1
 								}
@@ -3204,7 +3204,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 645.881444454193115, 759.690699815750122, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 386.664684850417871, 100.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 329.106210348753052, 100.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioReceive[2]",
 									"viewvisibility" : 1
 								}
@@ -3228,7 +3228,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 640.664910793304443, 489.790681600570679, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 385.805647246502701, 59.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 329.135614319515014, 59.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioReceive[1]",
 									"viewvisibility" : 1
 								}
@@ -3274,7 +3274,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 645.293777465820312, 189.336079835891724, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 386.353038839453291, 18.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 327.951580996920541, 18.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioReceive",
 									"viewvisibility" : 1
 								}
@@ -3322,7 +3322,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 85.881444454193115, 727.515663132667669, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 4.829130041166422, 100.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 4.829130041166422, 100.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendC1",
 									"viewvisibility" : 1
 								}
@@ -3346,7 +3346,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 83.881444454193115, 466.068035364151001, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 4.829130041166437, 59.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 4.829130041166437, 59.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendB1",
 									"viewvisibility" : 1
 								}
@@ -3370,7 +3370,7 @@
 									"outlettype" : [ "signal", "signal", "" ],
 									"patching_rect" : [ 87.881444454193115, 185.459790945053101, 69.0, 39.0 ],
 									"presentation" : 1,
-									"presentation_rect" : [ 6.0, 18.654470458030573, 69.0, 39.0 ],
+									"presentation_rect" : [ 6.0, 18.654470458030573, 56.0, 39.0 ],
 									"varname" : "AudioSendA1",
 									"viewvisibility" : 1
 								}
@@ -9522,7 +9522,7 @@
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 505.0, 670.0 ],
+						"rect" : [ 0.0, 26.0, 503.0, 696.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -9559,7 +9559,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 13.856852650642395, 801.0, 499.0, 87.0 ],
+									"patching_rect" : [ 0.856852650642395, 800.0, 499.0, 87.0 ],
 									"text" : "JMess is a crucial utility for saving and reloading routing configurations as xml files. (An installer link is in the README.md file.) Once you have routed a band the first time, you can save the routing using JMess and easily reload it later. If anyone's public IP changes, it is often easier to edit the xml file manually (i.e. find/replace the IP). In the future, routing could be automated with shell scripts or other means, but for regular use by the same ensemble, JMess is a simple solution."
 								}
 
@@ -9572,7 +9572,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 13.856852650642395, 774.0, 497.0, 20.0 ],
+									"patching_rect" : [ 0.856852650642395, 773.0, 497.0, 20.0 ],
 									"text" : "Saving/editing routing configurations"
 								}
 
@@ -9585,7 +9585,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 13.856852650642395, 637.0, 497.0, 127.0 ],
+									"patching_rect" : [ 0.856852650642395, 636.0, 497.0, 127.0 ],
 									"text" : "Use Max outputs 32-33 (capture_32-33) to send the broadcast mix (for sending to the audience, with fewer dropouts but added latency) out from Max\nUse Max outputs 34-35 (capture_34-35) to send the standard mix (for monitoring the level of dropouts players hear, with no added latency) out from Max\n\nFor example, if a producer connects as a remote jacktrip client with 4 channels, to enable receiving the broadcast mix on 1-2 and the standard mix on 3-4:\nsystem:capture 33-33 (dac~32-33) to talkback client sends 1-2 (broadcast)\nsystem:capture 34-35 (dac~34-35) to talkback client sends 3-4 (standard)"
 								}
 
@@ -9598,7 +9598,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 13.856852650642395, 610.0, 497.0, 20.0 ],
+									"patching_rect" : [ 0.856852650642395, 609.0, 497.0, 20.0 ],
 									"text" : "Routing master mixes from Max to producer/broadcast"
 								}
 
@@ -9611,7 +9611,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 13.856852650642395, 484.0, 497.0, 114.0 ],
+									"patching_rect" : [ 0.856852650642395, 483.0, 497.0, 114.0 ],
 									"text" : "Use Max outputs 20-31 (capture_20 -_31) to send players stereo mixes:\n\nsystem:capture 20-21 (dac~20-21) to player1 (send_1 and send_2)\nsystem:capture 22-23 (dac~22-23) to player2 (send_1 and send_2)\nsystem:capture 24-25 (dac~24-25) to player3 (send_1 and send_2)\nsystem:capture 26-27 (dac~26-27) to player4 (send_1 and send_2)\nsystem:capture 28-29 (dac~28-29) to player5 (send_1 and send_2)\nsystem:capture 30-31 (dac~30-31) to player6 (send_1 and send_2)"
 								}
 
@@ -9624,7 +9624,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 13.856852650642395, 460.0, 497.0, 20.0 ],
+									"patching_rect" : [ 0.856852650642395, 459.0, 497.0, 20.0 ],
 									"text" : "Routing client mixes from Max to players"
 								}
 
@@ -9637,7 +9637,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 13.856852650642395, 33.0, 497.0, 100.0 ],
+									"patching_rect" : [ 0.856852650642395, 32.0, 497.0, 100.0 ],
 									"text" : "Use Max input 11 (playback_11) for talkback mic, whether coming in via interface on server computer and/or from a jacktrip client. (Note: Talkback mic is sent to both the client mixes and the broadcast mix.)\n\nExamples:\ntalkback-client receive_1 to playback_11 (adc~ 11)\ncapture_1 to playback_11 (adc~ 11)"
 								}
 
@@ -9650,7 +9650,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 13.856852650642395, 9.0, 497.0, 20.0 ],
+									"patching_rect" : [ 0.856852650642395, 8.0, 497.0, 20.0 ],
 									"text" : "Routing talkback mic into Max"
 								}
 
@@ -9663,7 +9663,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 13.856852650642395, 321.0, 498.0, 127.0 ],
+									"patching_rect" : [ 0.856852650642395, 320.0, 498.0, 127.0 ],
 									"text" : "Use Max inputs 12-17 (playback_12 -_17) to input players' \"broadcast_1 and _2\" to a single mono channel per player:\n\nplayer1 broadcast_1 and _2 to playback_12 (adc~ 12)\nplayer2 broadcast_1 and _2 to playback_13 (adc~ 13)\nplayer3 broadcast_1 and _2 to playback_14 (adc~ 14)\nplayer4 broadcast_1 and _2 to playback_15 (adc~ 15)\nplayer5 broadcast_1 and _2 to playback_16  (adc~ 16)\nplayer6 broadcast_1 and _2 to playback_17 (adc~ 17)"
 								}
 
@@ -9676,7 +9676,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 13.856852650642395, 297.0, 497.0, 20.0 ],
+									"patching_rect" : [ 0.856852650642395, 296.0, 497.0, 20.0 ],
 									"text" : "Routing players' broadcast receives into Max"
 								}
 
@@ -9689,7 +9689,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 13.856852650642395, 159.0, 497.0, 127.0 ],
+									"patching_rect" : [ 0.856852650642395, 158.0, 497.0, 127.0 ],
 									"text" : "Use Max inputs 5-10 (playback_5 -_10) to input players' \"receive_1 and _2\" to a single mono channel per player:\n\nplayer1 receive_1 and _2 to playback_5 (adc~ 5)\nplayer2 receive_1 and _2 to playback_6 (adc~ 6)\nplayer3 receive_1 and _2 to playback_7 (adc~ 7)\nplayer4 receive_1 and _2 to playback_8 (adc~ 8)\nplayer5 receive_1 and _2 to playback_9  (adc~ 9)\nplayer6 receive_1 and _2 to playback_10 (adc~ 10)"
 								}
 
@@ -9702,7 +9702,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 13.856852650642395, 135.0, 497.0, 20.0 ],
+									"patching_rect" : [ 0.856852650642395, 134.0, 497.0, 20.0 ],
 									"text" : "Routing players' standard receives into Max"
 								}
 
@@ -10214,7 +10214,7 @@
 					"patching_rect" : [ 1088.113810713291059, 435.906775951385498, 95.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 346.770698630552261, 357.046118497848511, 66.267875427728995, 22.0 ],
-					"text" : "empty",
+					"text" : "player-6",
 					"textjustification" : 1
 				}
 
@@ -10229,7 +10229,7 @@
 					"patching_rect" : [ 985.559946687647084, 435.906775951385498, 95.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 278.281890595107086, 357.046118497848511, 65.673139929771423, 22.0 ],
-					"text" : "empty",
+					"text" : "player-5",
 					"textjustification" : 1
 				}
 
@@ -10244,7 +10244,7 @@
 					"patching_rect" : [ 885.994762339251338, 435.906775951385498, 95.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 210.60299040721543, 357.046118497848511, 65.767827504783952, 22.0 ],
-					"text" : "Hime",
+					"text" : "player-4",
 					"textjustification" : 1
 				}
 
@@ -10259,7 +10259,7 @@
 					"patching_rect" : [ 782.851905196394114, 435.906775951385498, 95.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 141.304274524216595, 357.046118497848511, 66.48880803544526, 22.0 ],
-					"text" : "Nico",
+					"text" : "player-3",
 					"textjustification" : 1
 				}
 
@@ -10274,7 +10274,7 @@
 					"patching_rect" : [ 676.131375259075753, 435.906775951385498, 95.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 72.815466488771335, 357.046118497848511, 66.673139870166779, 22.0 ],
-					"text" : "Kei",
+					"text" : "player-2",
 					"textjustification" : 1
 				}
 
@@ -10289,7 +10289,7 @@
 					"patching_rect" : [ 565.252134812218742, 435.906775951385498, 92.333331823348999, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 7.334987956749274, 357.046118497848511, 63.480478532022062, 22.0 ],
-					"text" : "Joe",
+					"text" : "player-1",
 					"textjustification" : 1
 				}
 
@@ -12993,28 +12993,35 @@
 		"dependency_cache" : [ 			{
 				"name" : "AudioReceive.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/patchers",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/AudioMix/patchers",
+				"patcherrelativepath" : "../../Max 8/Packages/AudioMix/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "AudioRecord.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/patchers",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/AudioMix/patchers",
+				"patcherrelativepath" : "../../Max 8/Packages/AudioMix/patchers",
 				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "setup.txt",
+				"bootpath" : "~/Documents/GitHub/Jacktrip-Max-Mixer",
+				"patcherrelativepath" : ".",
+				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "AudioSend.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/patchers",
-				"patcherrelativepath" : "../Documents/Max 8/Packages/AudioMix/patchers",
+				"patcherrelativepath" : "../../Max 8/Packages/AudioMix/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "AUMatrixReverb.maxsnap",
 				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../Documents/Max 8/Snapshots",
+				"patcherrelativepath" : "../../Max 8/Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
