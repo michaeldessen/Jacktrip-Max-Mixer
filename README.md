@@ -51,6 +51,5 @@ Having control over one's individual monitor mix is crucial in many kinds of mus
 * individual monitor mixes that players can control remotely without increasing their bandwidth requirements (i.e. they receive a stereo mix, not multiple channels)
 * a simple interface for a producer to simultaneously monitor the low-latency players' mix and create a broadcast-quality mix using the new jitter buffer feature in JackTrip v1.3
 
-Compared to simply using the auto-patching modes in JackTrip hub server mode, routing audio into and out of this server Max patch does probably add a very small amount of latency. However, the difference is so negligible that I have found musicians did not notice it across sessions with and without the mixer app.
-
-I am not a developer and my Max patching is honestly embarrassing, but these patches are very simple and have worked for me. I welcome any help. I may extend them soon to allow for dynamic routing and other features, but it might not be worth the trouble.
+## Contributors
+Michael Dessen, Matthew Nelson
