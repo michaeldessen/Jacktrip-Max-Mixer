@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 1,
-			"revision" : 11,
+			"revision" : 8,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -142,13 +142,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 11,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 1618.0, 306.0, 640.0, 480.0 ],
+						"rect" : [ 441.0, 324.0, 640.0, 480.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -348,9 +348,9 @@
 , 							{
 								"name" : "Default M4L",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 11.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -359,9 +359,9 @@
 , 							{
 								"name" : "Default M4L Poletti",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 10.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 10.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -370,6 +370,7 @@
 , 							{
 								"name" : "Default M4L-1",
 								"default" : 								{
+									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
 									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
@@ -380,8 +381,7 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-,
-									"fontname" : [ "Arial" ]
+
 								}
 ,
 								"parentstyle" : "",
@@ -531,7 +531,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1390.643055246140648, 773.468667309284228, 235.0, 100.0 ],
+					"patching_rect" : [ 1390.643055246140648, 773.468667309284228, 236.0, 100.0 ],
 					"text" : "This simply sends all mono player inputs back out to the flat mix client monitor send (see routing notes) so that the talkback-client (producer) can monitor the standard low latency receives (i.e. without having to listen in on a particular client mix)",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"textjustification" : 1
@@ -554,10 +554,10 @@
 					"id" : "obj-28",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 7,
-					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal", "signal" ],
-					"patching_rect" : [ 1440.669074201639887, 666.698110063076001, 117.0, 22.0 ],
-					"text" : "adc~ 5 6 7 8 9 10 11"
+					"numoutlets" : 6,
+					"outlettype" : [ "signal", "signal", "signal", "signal", "signal", "signal" ],
+					"patching_rect" : [ 1440.669074201639887, 666.698110063076001, 102.0, 22.0 ],
+					"text" : "adc~ 5 6 7 8 9 10"
 				}
 
 			}
@@ -868,10 +868,10 @@
 				"box" : 				{
 					"id" : "obj-40",
 					"maxclass" : "newobj",
-					"numinlets" : 12,
+					"numinlets" : 14,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1403.57694881784073, 1485.144675731658936, 235.0, 22.0 ],
-					"text" : "dac~ 20 21 22 23 24 25 26 27 28 29 30 31"
+					"patching_rect" : [ 1401.076948817840275, 1531.786838412284851, 268.0, 22.0 ],
+					"text" : "dac~ 20 21 22 23 24 25 26 27 28 29 30 31 34 35"
 				}
 
 			}
@@ -884,7 +884,7 @@
 					"numoutlets" : 5,
 					"outlettype" : [ "signal", "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 1525.283903535476838, 1339.023541569709778, 30.0, 86.0 ],
+					"patching_rect" : [ 1525.283903535476838, 1339.023541569709778, 114.0, 82.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 11.736592688711369, 169.261995705691334, 26.0, 139.0 ],
 					"saved_attribute_attributes" : 					{
@@ -930,8 +930,8 @@
 						"followglobaltempo" : 0,
 						"formantcorrection" : 0,
 						"mode" : "basic",
-						"originallength" : [ 378191.760544217657298, "ticks" ],
-						"originaltempo" : 119.999999999999986,
+						"originallength" : [ 1728144.195918367244303, "ticks" ],
+						"originaltempo" : 120.0,
 						"pitchcorrection" : 0,
 						"quality" : "basic",
 						"timestretch" : [ 0 ]
@@ -991,7 +991,7 @@
 							"isbase64" : 1,
 							"sliderorder" : [  ],
 							"slidervisibility" : [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
-							"blob" : "328.hAGaoMGcv.y0AHv.DTfAGfPBJr.CM3.WsEla0YVXiQWcxUlbTQVXzE1UyUmXzkGbk4kbk4FYkIWKwUWXrkFc4QEc4AWYWYWYxMWZu4FUtEVakIQXvAGaOAAk..............PD......jUu9O...P.AsZo9C...H.OwU4.....Czyd9EI....A7P2g8C...TfNCJwa....F7yItRA...vA+3BE6A...fvOUH7i....I7CP......fB+Lx8OC...rfOJyXu....L7Sm7QI...PC977hfA...3.Qt.KB....O.DP.......D.....HQaxUlcP7mDgUmY3AA.c0TYjkVcsABRgwFafLC.H.vE.PB.o.PL..D.EAPS.HE.WAf6.LO.0Cf9.vO.......f.A.........vC..................P.J."
+							"blob" : "328.hAGaoMGcv.y0AHv.DTfAGfPBJr.CM3.WsEla0YVXiQWcxUlbTQVXzE1UyUmXzkGbk4kbk4FYkIWKwUWXrkFc4QEc4AWYWYWYxMWZu4FUtEVakIQXvAGaOAAk..............PD......zPPA....P.AUHv.....H.Ou8h0....Czyd9EI....A7P2g8C...TfNCJwa....F7yItRA...vA+3BE6A...fvOUH7i....I7CP......fB+Lx8OC...rfOJyXu....L7Sm7QI...PC977hfA...3fQM..D....O.Df.......DAQhAfIQaxUlcP7mDgUmY3AA.c0TYjkVcsABRgwFafLC.H.vE.PB.o.PL..D.EAPS.HE.WAf6.LO.0Cf9.vO.......f.A.........vC..................P.J."
 						}
 ,
 						"snapshotlist" : 						{
@@ -1015,7 +1015,7 @@
 										"isbase64" : 1,
 										"sliderorder" : [  ],
 										"slidervisibility" : [ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ],
-										"blob" : "328.hAGaoMGcv.y0AHv.DTfAGfPBJr.CM3.WsEla0YVXiQWcxUlbTQVXzE1UyUmXzkGbk4kbk4FYkIWKwUWXrkFc4QEc4AWYWYWYxMWZu4FUtEVakIQXvAGaOAAk..............PD......jUu9O...P.AsZo9C...H.OwU4.....Czyd9EI....A7P2g8C...TfNCJwa....F7yItRA...vA+3BE6A...fvOUH7i....I7CP......fB+Lx8OC...rfOJyXu....L7Sm7QI...PC977hfA...3.Qt.KB....O.DP.......D.....HQaxUlcP7mDgUmY3AA.c0TYjkVcsABRgwFafLC.H.vE.PB.o.PL..D.EAPS.HE.WAf6.LO.0Cf9.vO.......f.A.........vC..................P.J."
+										"blob" : "328.hAGaoMGcv.y0AHv.DTfAGfPBJr.CM3.WsEla0YVXiQWcxUlbTQVXzE1UyUmXzkGbk4kbk4FYkIWKwUWXrkFc4QEc4AWYWYWYxMWZu4FUtEVakIQXvAGaOAAk..............PD......zPPA....P.AUHv.....H.Ou8h0....Czyd9EI....A7P2g8C...TfNCJwa....F7yItRA...vA+3BE6A...fvOUH7i....I7CP......fB+Lx8OC...rfOJyXu....L7Sm7QI...PC977hfA...3fQM..D....O.Df.......DAQhAfIQaxUlcP7mDgUmY3AA.c0TYjkVcsABRgwFafLC.H.vE.PB.o.PL..D.EAPS.HE.WAf6.LO.0Cf9.vO.......f.A.........vC..................P.J."
 									}
 ,
 									"fileref" : 									{
@@ -1023,7 +1023,25 @@
 										"filename" : "AUMatrixReverb.maxsnap",
 										"filepath" : "~/Documents/Max 8/Snapshots",
 										"filepos" : -1,
-										"snapshotfileid" : "933c4927919d2c8b7371d987f4b98ae0"
+										"snapshotfileid" : "6f10a520e678ccd11f71f5b3faebb213"
+									}
+
+								}
+, 								{
+									"filetype" : "C74Snapshot",
+									"version" : 2,
+									"minorversion" : 0,
+									"name" : "AUMatrixReverb",
+									"origin" : "AUMatrixReverb.auinfo",
+									"type" : "AudioUnit",
+									"subtype" : "AudioEffect",
+									"embed" : 0,
+									"fileref" : 									{
+										"name" : "AUMatrixReverb",
+										"filename" : "AUMatrixReverb.maxsnap",
+										"filepath" : "~/Documents/Max 8/Snapshots",
+										"filepos" : -1,
+										"snapshotfileid" : "6f10a520e678ccd11f71f5b3faebb213"
 									}
 
 								}
@@ -1062,13 +1080,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 11,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 503.0, 696.0 ],
+						"rect" : [ 0.0, 26.0, 537.0, 664.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1105,7 +1123,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 2.856852650642395, 499.0, 475.0, 422.0 ],
+									"patching_rect" : [ 2.856852650642395, 499.0, 477.0, 422.0 ],
 									"text" : "In addition to the monitor mixes sent to each player, the patch also enables the producer to send out (typically to themselves) two different master mixes:\n\n1. A standard, low latency mix of flat player levels, in order to monitor the audio quality the players are hearing\n\n2. A concert \"broadcast\" mix using the new jitter buffer feature introduced in JackTrip v1.3, in order to send a mix to an online audience with several hundred milliseconds latency, but clean sound and ensemble synchrony identical to what the players are experiencing.\n\nTo receive both mixes simultaneously, the producer can make a 4-channel connection when connecting as client, e.g.: jacktrip -C <IP> -n4\n\nAn example of JackTrip command to use on the server to enable the new jitter buffer feature is the following:\n\njacktrip -S -p5 -q9 -broadcast 250\n\n--broadcast 200: The --broadcast argument creates an additional pair of receive ports for each client, labelled \"broadcast_1\" and \"broadcast_2\", which in this case would process the client audio using a jitter buffer of 200ms.\n\n-p5: This is a hub server mode argument that indicates no auto-patching, useful here so that when clients connect, they are not auto-patched in any way that would overlay unintended routing.\n\n-q9: This server argument sets the server queue to 9, which might be a good compromise between latency/quality.\n\n"
 								}
 
@@ -1170,7 +1188,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 2.856852650642395, 67.0, 474.0, 208.0 ],
+									"patching_rect" : [ 2.856852650642395, 67.0, 476.0, 208.0 ],
 									"text" : "The \"routing notes\" assume that the producer is managing the server remotely and connecting to it as a JackTrip client, and that on the server, both Max and JACK use Soundflower 64 as an input/output audio device. \n\nIf you instead wish to use  an audio interface connected to the server machine for audio input/output, you can create an Aggregate Audio Device (in Audio Midi Setup) that uses your interface ins/outs first, followed by Soundflower 64, and use that Aggregate Device in JACK while using only Soundflower alone in Max. You would then need to adjust the numbers listed in the routing notes tab here accordingly. For example, if your interface has 2 ins and 2 outs, then in this scenario you would add the number 2 to each of the \"capture\" and \"playback\" numbers listed there, because the Aggregate device's input (capture) 3 would correspond to Soundflower channel 1 (adc~ 1 in Max).\n\nImportant reminder: When using Soundflower or any other virtual audio device, avoid using the same channel for both input and output, because this will create a loop."
 								}
 
@@ -1210,9 +1228,9 @@
 , 							{
 								"name" : "Default M4L",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 11.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -1221,9 +1239,9 @@
 , 							{
 								"name" : "Default M4L Poletti",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 10.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 10.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -1232,6 +1250,7 @@
 , 							{
 								"name" : "Default M4L-1",
 								"default" : 								{
+									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
 									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
@@ -1242,8 +1261,7 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-,
-									"fontname" : [ "Arial" ]
+
 								}
 ,
 								"parentstyle" : "",
@@ -1696,13 +1714,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 11,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 503.0, 696.0 ],
+						"rect" : [ 0.0, 26.0, 537.0, 664.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
@@ -4880,9 +4898,9 @@
 , 							{
 								"name" : "Default M4L",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 11.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4891,9 +4909,9 @@
 , 							{
 								"name" : "Default M4L Poletti",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 10.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 10.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -4902,6 +4920,7 @@
 , 							{
 								"name" : "Default M4L-1",
 								"default" : 								{
+									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
 									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
@@ -4912,8 +4931,7 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-,
-									"fontname" : [ "Arial" ]
+
 								}
 ,
 								"parentstyle" : "",
@@ -5016,10 +5034,10 @@
 				"box" : 				{
 					"id" : "obj-302",
 					"maxclass" : "newobj",
-					"numinlets" : 12,
+					"numinlets" : 14,
 					"numoutlets" : 0,
-					"patching_rect" : [ 899.295074326931399, 924.660640792846607, 235.0, 22.0 ],
-					"text" : "dac~ 20 21 22 23 24 25 26 27 28 29 30 31"
+					"patching_rect" : [ 868.340528872385676, 921.333378314971924, 268.0, 22.0 ],
+					"text" : "dac~ 20 21 22 23 24 25 26 27 28 29 30 31 34 35"
 				}
 
 			}
@@ -5526,7 +5544,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 11,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -6033,9 +6051,9 @@
 , 							{
 								"name" : "Default M4L",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 11.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -6044,9 +6062,9 @@
 , 							{
 								"name" : "Default M4L Poletti",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 10.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 10.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -6055,6 +6073,7 @@
 , 							{
 								"name" : "Default M4L-1",
 								"default" : 								{
+									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
 									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
@@ -6065,8 +6084,7 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-,
-									"fontname" : [ "Arial" ]
+
 								}
 ,
 								"parentstyle" : "",
@@ -6189,13 +6207,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 11,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ -1262.0, 113.0, 400.0, 487.0 ],
+						"rect" : [ 34.0, 113.0, 400.0, 487.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -6696,9 +6714,9 @@
 , 							{
 								"name" : "Default M4L",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 11.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -6707,9 +6725,9 @@
 , 							{
 								"name" : "Default M4L Poletti",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 10.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 10.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -6718,6 +6736,7 @@
 , 							{
 								"name" : "Default M4L-1",
 								"default" : 								{
+									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
 									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
@@ -6728,8 +6747,7 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-,
-									"fontname" : [ "Arial" ]
+
 								}
 ,
 								"parentstyle" : "",
@@ -6852,7 +6870,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 11,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -7359,9 +7377,9 @@
 , 							{
 								"name" : "Default M4L",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 11.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -7370,9 +7388,9 @@
 , 							{
 								"name" : "Default M4L Poletti",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 10.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 10.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -7381,6 +7399,7 @@
 , 							{
 								"name" : "Default M4L-1",
 								"default" : 								{
+									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
 									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
@@ -7391,8 +7410,7 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-,
-									"fontname" : [ "Arial" ]
+
 								}
 ,
 								"parentstyle" : "",
@@ -7515,7 +7533,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 11,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -8022,9 +8040,9 @@
 , 							{
 								"name" : "Default M4L",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 11.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -8033,9 +8051,9 @@
 , 							{
 								"name" : "Default M4L Poletti",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 10.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 10.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -8044,6 +8062,7 @@
 , 							{
 								"name" : "Default M4L-1",
 								"default" : 								{
+									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
 									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
@@ -8054,8 +8073,7 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-,
-									"fontname" : [ "Arial" ]
+
 								}
 ,
 								"parentstyle" : "",
@@ -8178,7 +8196,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 11,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -8685,9 +8703,9 @@
 , 							{
 								"name" : "Default M4L",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 11.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -8696,9 +8714,9 @@
 , 							{
 								"name" : "Default M4L Poletti",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 10.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 10.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -8707,6 +8725,7 @@
 , 							{
 								"name" : "Default M4L-1",
 								"default" : 								{
+									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
 									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
@@ -8717,8 +8736,7 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-,
-									"fontname" : [ "Arial" ]
+
 								}
 ,
 								"parentstyle" : "",
@@ -8841,7 +8859,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 11,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -9348,9 +9366,9 @@
 , 							{
 								"name" : "Default M4L",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 11.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -9359,9 +9377,9 @@
 , 							{
 								"name" : "Default M4L Poletti",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 10.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 10.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -9370,6 +9388,7 @@
 , 							{
 								"name" : "Default M4L-1",
 								"default" : 								{
+									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
 									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
@@ -9380,8 +9399,7 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-,
-									"fontname" : [ "Arial" ]
+
 								}
 ,
 								"parentstyle" : "",
@@ -9516,13 +9534,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 11,
+							"revision" : 8,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 503.0, 696.0 ],
+						"rect" : [ 0.0, 26.0, 537.0, 664.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -9729,9 +9747,9 @@
 , 							{
 								"name" : "Default M4L",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 11.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -9740,9 +9758,9 @@
 , 							{
 								"name" : "Default M4L Poletti",
 								"default" : 								{
+									"fontname" : [ "Arial Bold" ],
 									"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-									"fontsize" : [ 10.0 ],
-									"fontname" : [ "Arial Bold" ]
+									"fontsize" : [ 10.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -9751,6 +9769,7 @@
 , 							{
 								"name" : "Default M4L-1",
 								"default" : 								{
+									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
 									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
@@ -9761,8 +9780,7 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-,
-									"fontname" : [ "Arial" ]
+
 								}
 ,
 								"parentstyle" : "",
@@ -10229,7 +10247,7 @@
 					"patching_rect" : [ 985.559946687647084, 435.906775951385498, 95.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 278.281890595107086, 357.046118497848511, 65.673139929771423, 22.0 ],
-					"text" : "player-5",
+					"text" : "Artie",
 					"textjustification" : 1
 				}
 
@@ -10244,7 +10262,7 @@
 					"patching_rect" : [ 885.994762339251338, 435.906775951385498, 95.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 210.60299040721543, 357.046118497848511, 65.767827504783952, 22.0 ],
-					"text" : "player-4",
+					"text" : "David",
 					"textjustification" : 1
 				}
 
@@ -10259,7 +10277,7 @@
 					"patching_rect" : [ 782.851905196394114, 435.906775951385498, 95.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 141.304274524216595, 357.046118497848511, 66.48880803544526, 22.0 ],
-					"text" : "player-3",
+					"text" : "Jerry",
 					"textjustification" : 1
 				}
 
@@ -10274,7 +10292,7 @@
 					"patching_rect" : [ 676.131375259075753, 435.906775951385498, 95.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 72.815466488771335, 357.046118497848511, 66.673139870166779, 22.0 ],
-					"text" : "player-2",
+					"text" : "Daniel",
 					"textjustification" : 1
 				}
 
@@ -10289,7 +10307,7 @@
 					"patching_rect" : [ 565.252134812218742, 435.906775951385498, 92.333331823348999, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 7.334987956749274, 357.046118497848511, 63.480478532022062, 22.0 ],
-					"text" : "player-1",
+					"text" : "Nathaniel",
 					"textjustification" : 1
 				}
 
@@ -10787,7 +10805,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-16", 1 ],
-					"order" : 12,
+					"order" : 14,
 					"source" : [ "obj-188", 0 ]
 				}
 
@@ -10795,14 +10813,14 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
-					"order" : 13,
+					"order" : 15,
 					"source" : [ "obj-188", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-302", 11 ],
+					"destination" : [ "obj-302", 13 ],
 					"order" : 0,
 					"source" : [ "obj-188", 0 ]
 				}
@@ -10810,7 +10828,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-302", 10 ],
+					"destination" : [ "obj-302", 12 ],
 					"order" : 1,
 					"source" : [ "obj-188", 0 ]
 				}
@@ -10818,7 +10836,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-302", 9 ],
+					"destination" : [ "obj-302", 11 ],
 					"order" : 2,
 					"source" : [ "obj-188", 0 ]
 				}
@@ -10826,7 +10844,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-302", 8 ],
+					"destination" : [ "obj-302", 10 ],
 					"order" : 3,
 					"source" : [ "obj-188", 0 ]
 				}
@@ -10834,7 +10852,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-302", 7 ],
+					"destination" : [ "obj-302", 9 ],
 					"order" : 4,
 					"source" : [ "obj-188", 0 ]
 				}
@@ -10842,7 +10860,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-302", 6 ],
+					"destination" : [ "obj-302", 8 ],
 					"order" : 5,
 					"source" : [ "obj-188", 0 ]
 				}
@@ -10850,7 +10868,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-302", 5 ],
+					"destination" : [ "obj-302", 7 ],
 					"order" : 6,
 					"source" : [ "obj-188", 0 ]
 				}
@@ -10858,7 +10876,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-302", 4 ],
+					"destination" : [ "obj-302", 6 ],
 					"order" : 7,
 					"source" : [ "obj-188", 0 ]
 				}
@@ -10866,7 +10884,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-302", 3 ],
+					"destination" : [ "obj-302", 5 ],
 					"order" : 8,
 					"source" : [ "obj-188", 0 ]
 				}
@@ -10874,7 +10892,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-302", 2 ],
+					"destination" : [ "obj-302", 4 ],
 					"order" : 9,
 					"source" : [ "obj-188", 0 ]
 				}
@@ -10882,7 +10900,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-302", 1 ],
+					"destination" : [ "obj-302", 3 ],
 					"order" : 10,
 					"source" : [ "obj-188", 0 ]
 				}
@@ -10890,8 +10908,24 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-302", 0 ],
+					"destination" : [ "obj-302", 2 ],
 					"order" : 11,
+					"source" : [ "obj-188", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-302", 1 ],
+					"order" : 12,
+					"source" : [ "obj-188", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-302", 0 ],
+					"order" : 13,
 					"source" : [ "obj-188", 0 ]
 				}
 
@@ -11231,22 +11265,6 @@
 					"destination" : [ "obj-297", 0 ],
 					"order" : 1,
 					"source" : [ "obj-275", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-25", 1 ],
-					"order" : 0,
-					"source" : [ "obj-28", 6 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-25", 0 ],
-					"order" : 1,
-					"source" : [ "obj-28", 6 ]
 				}
 
 			}
@@ -11800,7 +11818,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 11 ],
+					"destination" : [ "obj-40", 13 ],
 					"order" : 0,
 					"source" : [ "obj-39", 1 ]
 				}
@@ -11808,7 +11826,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 10 ],
+					"destination" : [ "obj-40", 11 ],
 					"order" : 1,
 					"source" : [ "obj-39", 1 ]
 				}
@@ -11816,7 +11834,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 9 ],
+					"destination" : [ "obj-40", 10 ],
 					"order" : 2,
 					"source" : [ "obj-39", 1 ]
 				}
@@ -11824,7 +11842,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 8 ],
+					"destination" : [ "obj-40", 9 ],
 					"order" : 3,
 					"source" : [ "obj-39", 1 ]
 				}
@@ -11832,7 +11850,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 7 ],
+					"destination" : [ "obj-40", 8 ],
 					"order" : 4,
 					"source" : [ "obj-39", 1 ]
 				}
@@ -11840,7 +11858,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 6 ],
+					"destination" : [ "obj-40", 7 ],
 					"order" : 5,
 					"source" : [ "obj-39", 1 ]
 				}
@@ -11848,7 +11866,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 5 ],
+					"destination" : [ "obj-40", 6 ],
 					"order" : 6,
 					"source" : [ "obj-39", 1 ]
 				}
@@ -11856,7 +11874,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 4 ],
+					"destination" : [ "obj-40", 5 ],
 					"order" : 7,
 					"source" : [ "obj-39", 1 ]
 				}
@@ -11864,7 +11882,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 3 ],
+					"destination" : [ "obj-40", 4 ],
 					"order" : 8,
 					"source" : [ "obj-39", 1 ]
 				}
@@ -11872,7 +11890,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 2 ],
+					"destination" : [ "obj-40", 3 ],
 					"order" : 9,
 					"source" : [ "obj-39", 1 ]
 				}
@@ -11880,7 +11898,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 1 ],
+					"destination" : [ "obj-40", 2 ],
 					"order" : 10,
 					"source" : [ "obj-39", 1 ]
 				}
@@ -11888,7 +11906,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 0 ],
+					"destination" : [ "obj-40", 1 ],
 					"order" : 11,
 					"source" : [ "obj-39", 1 ]
 				}
@@ -11896,7 +11914,15 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 11 ],
+					"destination" : [ "obj-40", 0 ],
+					"order" : 12,
+					"source" : [ "obj-39", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-40", 12 ],
 					"order" : 0,
 					"source" : [ "obj-39", 0 ]
 				}
@@ -11904,7 +11930,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 10 ],
+					"destination" : [ "obj-40", 11 ],
 					"order" : 1,
 					"source" : [ "obj-39", 0 ]
 				}
@@ -11912,7 +11938,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 9 ],
+					"destination" : [ "obj-40", 10 ],
 					"order" : 2,
 					"source" : [ "obj-39", 0 ]
 				}
@@ -11920,7 +11946,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 8 ],
+					"destination" : [ "obj-40", 9 ],
 					"order" : 3,
 					"source" : [ "obj-39", 0 ]
 				}
@@ -11928,7 +11954,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 7 ],
+					"destination" : [ "obj-40", 8 ],
 					"order" : 4,
 					"source" : [ "obj-39", 0 ]
 				}
@@ -11936,7 +11962,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 6 ],
+					"destination" : [ "obj-40", 7 ],
 					"order" : 5,
 					"source" : [ "obj-39", 0 ]
 				}
@@ -11944,7 +11970,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 5 ],
+					"destination" : [ "obj-40", 6 ],
 					"order" : 6,
 					"source" : [ "obj-39", 0 ]
 				}
@@ -11952,7 +11978,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 4 ],
+					"destination" : [ "obj-40", 5 ],
 					"order" : 7,
 					"source" : [ "obj-39", 0 ]
 				}
@@ -11960,7 +11986,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 3 ],
+					"destination" : [ "obj-40", 4 ],
 					"order" : 8,
 					"source" : [ "obj-39", 0 ]
 				}
@@ -11968,7 +11994,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 2 ],
+					"destination" : [ "obj-40", 3 ],
 					"order" : 9,
 					"source" : [ "obj-39", 0 ]
 				}
@@ -11976,7 +12002,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 1 ],
+					"destination" : [ "obj-40", 2 ],
 					"order" : 10,
 					"source" : [ "obj-39", 0 ]
 				}
@@ -11984,8 +12010,16 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 0 ],
+					"destination" : [ "obj-40", 1 ],
 					"order" : 11,
+					"source" : [ "obj-39", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-40", 0 ],
+					"order" : 12,
 					"source" : [ "obj-39", 0 ]
 				}
 
@@ -12993,35 +13027,35 @@
 		"dependency_cache" : [ 			{
 				"name" : "AudioReceive.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/patchers",
-				"patcherrelativepath" : "../../Max 8/Packages/AudioMix/patchers",
+				"patcherrelativepath" : "../../../Documents/Max 8/Packages/AudioMix/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "AudioRecord.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/patchers",
-				"patcherrelativepath" : "../../Max 8/Packages/AudioMix/patchers",
+				"patcherrelativepath" : "../../../Documents/Max 8/Packages/AudioMix/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "setup.txt",
-				"bootpath" : "~/Documents/GitHub/Jacktrip-Max-Mixer",
-				"patcherrelativepath" : ".",
+				"name" : "pinter-setup.txt",
+				"bootpath" : "~/Desktop/pinter-combo-spr21",
+				"patcherrelativepath" : "../../pinter-combo-spr21",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "AudioSend.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/patchers",
-				"patcherrelativepath" : "../../Max 8/Packages/AudioMix/patchers",
+				"patcherrelativepath" : "../../../Documents/Max 8/Packages/AudioMix/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "AUMatrixReverb.maxsnap",
 				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../Max 8/Snapshots",
+				"patcherrelativepath" : "../../../Documents/Max 8/Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
@@ -13047,9 +13081,9 @@
 , 			{
 				"name" : "Default M4L",
 				"default" : 				{
+					"fontname" : [ "Arial Bold" ],
 					"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-					"fontsize" : [ 11.0 ],
-					"fontname" : [ "Arial Bold" ]
+					"fontsize" : [ 11.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -13058,9 +13092,9 @@
 , 			{
 				"name" : "Default M4L Poletti",
 				"default" : 				{
+					"fontname" : [ "Arial Bold" ],
 					"patchlinecolor" : [ 0.290196, 0.309804, 0.301961, 0.85 ],
-					"fontsize" : [ 10.0 ],
-					"fontname" : [ "Arial Bold" ]
+					"fontsize" : [ 10.0 ]
 				}
 ,
 				"parentstyle" : "",
@@ -13069,6 +13103,7 @@
 , 			{
 				"name" : "Default M4L-1",
 				"default" : 				{
+					"fontname" : [ "Arial" ],
 					"fontface" : [ 1 ],
 					"fontsize" : [ 11.0 ],
 					"bgfillcolor" : 					{
@@ -13079,8 +13114,7 @@
 						"angle" : 270.0,
 						"proportion" : 0.39
 					}
-,
-					"fontname" : [ "Arial" ]
+
 				}
 ,
 				"parentstyle" : "",
