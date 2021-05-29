@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 1,
-			"revision" : 8,
+			"revision" : 11,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -41,6 +41,36 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-32",
+					"linecount" : 4,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1644.535167902196918, 1301.773073196411133, 167.0, 60.0 ],
+					"presentation_linecount" : 4,
+					"text" : "Sends audio file playback out to all player mixes and standard mix (but not broadcast mix)",
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"textjustification" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 1611.143055246140648, 819.752759613990747, 167.0, 47.0 ],
+					"presentation_linecount" : 3,
+					"text" : "Sends metronome out to all player mixes and standard mix (but not broadcast mix)",
+					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
+					"textjustification" : 1
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-35",
 					"lastchannelcount" : 0,
 					"maxclass" : "live.gain~",
@@ -49,7 +79,7 @@
 					"orientation" : 1,
 					"outlettype" : [ "signal", "signal", "", "float", "list" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 1440.143055246140648, 1013.311399655342029, 136.0, 26.0 ],
+					"patching_rect" : [ 1443.012380141100039, 949.311400609016346, 136.0, 26.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 317.736592688711369, 258.776845070448871, 136.0, 26.0 ],
 					"saved_attribute_attributes" : 					{
@@ -76,7 +106,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1454.751824021339417, 921.333378314971924, 44.0, 20.0 ],
+					"patching_rect" : [ 1457.621148916298807, 857.33337926864624, 44.0, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 311.82999764044763, 181.777425649491306, 47.217851454167317, 20.0 ],
 					"text" : "On/Off",
@@ -92,7 +122,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1464.751824021339417, 943.333378314971924, 24.0, 24.0 ],
+					"patching_rect" : [ 1467.621148916298807, 879.33337926864624, 24.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 323.438923367531345, 204.168586703864094, 24.0, 24.0 ]
 				}
@@ -104,7 +134,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1514.507028579711914, 921.333378314971924, 43.518513441085815, 20.0 ],
+					"patching_rect" : [ 1517.376353474671305, 857.33337926864624, 43.518513441085815, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 407.78515379287802, 181.777425649491306, 32.0, 20.0 ],
 					"text" : "bpm",
@@ -124,7 +154,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 1511.266285300254822, 943.333378314971924, 50.0, 22.0 ],
+					"patching_rect" : [ 1514.135610195214213, 879.33337926864624, 50.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 398.78515379287802, 205.168586703864094, 50.0, 22.0 ]
 				}
@@ -142,7 +172,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -372,7 +402,6 @@
 								"default" : 								{
 									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
-									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -381,7 +410,8 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-
+,
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -452,7 +482,7 @@
 						"editing_bgcolor" : [ 0.301961, 0.301961, 0.301961, 1.0 ]
 					}
 ,
-					"patching_rect" : [ 1484.268620991762873, 974.444490909576416, 39.0, 22.0 ],
+					"patching_rect" : [ 1487.137945886722264, 910.444491863250732, 39.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"description" : "",
 						"digest" : "",
@@ -469,10 +499,10 @@
 				"box" : 				{
 					"id" : "obj-55",
 					"maxclass" : "newobj",
-					"numinlets" : 12,
+					"numinlets" : 14,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1396.495893719035621, 1066.605878369808124, 235.0, 22.0 ],
-					"text" : "dac~ 20 21 22 23 24 25 26 27 28 29 30 31"
+					"patching_rect" : [ 1358.137945886722491, 1021.605879323482441, 268.0, 22.0 ],
+					"text" : "dac~ 20 21 22 23 24 25 26 27 28 29 30 31 34 35"
 				}
 
 			}
@@ -485,7 +515,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1446.268620991762873, 888.081584172248768, 106.0, 31.0 ],
+					"patching_rect" : [ 1449.137945886722264, 824.081585125923084, 106.0, 31.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 273.451458997448128, 147.261995705691334, 197.0, 19.0 ],
 					"text" : "Metronome to Players",
@@ -527,12 +557,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-29",
-					"linecount" : 7,
+					"linecount" : 5,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1390.643055246140648, 773.468667309284228, 236.0, 100.0 ],
-					"text" : "This simply sends all mono player inputs back out to the flat mix client monitor send (see routing notes) so that the talkback-client (producer) can monitor the standard low latency receives (i.e. without having to listen in on a particular client mix)",
+					"patching_rect" : [ 1568.143055246140648, 653.198110063076001, 167.0, 74.0 ],
+					"text" : "Sends all mono player inputs back out to the standard mix for producer to use for monitoring flat, low latency mix",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"textjustification" : 1
 				}
@@ -598,10 +628,11 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-306",
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 946.45940910097579, 129.771075365543368, 284.0, 20.0 ],
+					"patching_rect" : [ 1034.363810713291059, 101.797655701637268, 148.0, 47.0 ],
 					"text" : "Presets for setting panning/levels for broadcast mix:",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
@@ -1023,25 +1054,7 @@
 										"filename" : "AUMatrixReverb.maxsnap",
 										"filepath" : "~/Documents/Max 8/Snapshots",
 										"filepos" : -1,
-										"snapshotfileid" : "6f10a520e678ccd11f71f5b3faebb213"
-									}
-
-								}
-, 								{
-									"filetype" : "C74Snapshot",
-									"version" : 2,
-									"minorversion" : 0,
-									"name" : "AUMatrixReverb",
-									"origin" : "AUMatrixReverb.auinfo",
-									"type" : "AudioUnit",
-									"subtype" : "AudioEffect",
-									"embed" : 0,
-									"fileref" : 									{
-										"name" : "AUMatrixReverb",
-										"filename" : "AUMatrixReverb.maxsnap",
-										"filepath" : "~/Documents/Max 8/Snapshots",
-										"filepos" : -1,
-										"snapshotfileid" : "6f10a520e678ccd11f71f5b3faebb213"
+										"snapshotfileid" : "933c4927919d2c8b7371d987f4b98ae0"
 									}
 
 								}
@@ -1063,7 +1076,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 954.689991143122938, 661.79085020065304, 70.0, 22.0 ],
+					"patching_rect" : [ 956.689991143122938, 730.79085020065304, 70.0, 22.0 ],
 					"text" : "loadmess 0"
 				}
 
@@ -1080,13 +1093,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 537.0, 664.0 ],
+						"rect" : [ 0.0, 26.0, 503.0, 698.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -1123,7 +1136,7 @@
 									"maxclass" : "comment",
 									"numinlets" : 1,
 									"numoutlets" : 0,
-									"patching_rect" : [ 2.856852650642395, 499.0, 477.0, 422.0 ],
+									"patching_rect" : [ 2.856852650642395, 499.0, 480.0, 422.0 ],
 									"text" : "In addition to the monitor mixes sent to each player, the patch also enables the producer to send out (typically to themselves) two different master mixes:\n\n1. A standard, low latency mix of flat player levels, in order to monitor the audio quality the players are hearing\n\n2. A concert \"broadcast\" mix using the new jitter buffer feature introduced in JackTrip v1.3, in order to send a mix to an online audience with several hundred milliseconds latency, but clean sound and ensemble synchrony identical to what the players are experiencing.\n\nTo receive both mixes simultaneously, the producer can make a 4-channel connection when connecting as client, e.g.: jacktrip -C <IP> -n4\n\nAn example of JackTrip command to use on the server to enable the new jitter buffer feature is the following:\n\njacktrip -S -p5 -q9 -broadcast 250\n\n--broadcast 200: The --broadcast argument creates an additional pair of receive ports for each client, labelled \"broadcast_1\" and \"broadcast_2\", which in this case would process the client audio using a jitter buffer of 200ms.\n\n-p5: This is a hub server mode argument that indicates no auto-patching, useful here so that when clients connect, they are not auto-patched in any way that would overlay unintended routing.\n\n-q9: This server argument sets the server queue to 9, which might be a good compromise between latency/quality.\n\n"
 								}
 
@@ -1252,7 +1265,6 @@
 								"default" : 								{
 									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
-									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -1261,7 +1273,8 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-
+,
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -1616,7 +1629,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 714.878498404707102, 1731.645263195037842, 172.0, 47.0 ],
-					"text" : "Gain and pan settings here will are for broadcast mix. Will not affect monitor mixes.",
+					"text" : "Gain and pan settings here are for broadcast mix, and don't affect monitor mixes.",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ]
 				}
 
@@ -1624,12 +1637,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-8",
-					"linecount" : 2,
+					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 563.125170939734971, 985.60983806848526, 245.0, 33.0 ],
-					"text" : "*Gain and pan settings here will feed into all monitor mixes. Will not affect broadcast mix.",
+					"patching_rect" : [ 593.310744131292495, 660.198110063076001, 164.449358675905614, 60.0 ],
+					"text" : "Gain settings here are applied before all player monitor mixes. Will not affect standard or broadcast mix.",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"textjustification" : 1
 				}
@@ -1714,13 +1727,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 537.0, 664.0 ],
+						"rect" : [ 0.0, 26.0, 503.0, 698.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 1,
 						"default_fontsize" : 12.0,
@@ -4922,7 +4935,6 @@
 								"default" : 								{
 									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
-									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -4931,7 +4943,8 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-
+,
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -5544,7 +5557,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -6075,7 +6088,6 @@
 								"default" : 								{
 									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
-									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -6084,7 +6096,8 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-
+,
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -6207,7 +6220,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -6738,7 +6751,6 @@
 								"default" : 								{
 									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
-									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -6747,7 +6759,8 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-
+,
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -6870,7 +6883,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -7401,7 +7414,6 @@
 								"default" : 								{
 									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
-									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -7410,7 +7422,8 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-
+,
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -7533,7 +7546,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -8064,7 +8077,6 @@
 								"default" : 								{
 									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
-									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -8073,7 +8085,8 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-
+,
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -8196,7 +8209,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -8727,7 +8740,6 @@
 								"default" : 								{
 									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
-									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -8736,7 +8748,8 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-
+,
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -8859,7 +8872,7 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
@@ -9390,7 +9403,6 @@
 								"default" : 								{
 									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
-									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -9399,7 +9411,8 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-
+,
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -9534,13 +9547,13 @@
 						"appversion" : 						{
 							"major" : 8,
 							"minor" : 1,
-							"revision" : 8,
+							"revision" : 11,
 							"architecture" : "x64",
 							"modernui" : 1
 						}
 ,
 						"classnamespace" : "box",
-						"rect" : [ 0.0, 26.0, 537.0, 664.0 ],
+						"rect" : [ 0.0, 26.0, 503.0, 698.0 ],
 						"bglocked" : 0,
 						"openinpresentation" : 0,
 						"default_fontsize" : 12.0,
@@ -9771,7 +9784,6 @@
 								"default" : 								{
 									"fontname" : [ "Arial" ],
 									"fontface" : [ 1 ],
-									"fontsize" : [ 11.0 ],
 									"bgfillcolor" : 									{
 										"type" : "gradient",
 										"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -9780,7 +9792,8 @@
 										"angle" : 270.0,
 										"proportion" : 0.39
 									}
-
+,
+									"fontsize" : [ 11.0 ]
 								}
 ,
 								"parentstyle" : "",
@@ -9871,7 +9884,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 978.545660581961783, 685.79085020065304, 22.288661122322083, 20.0 ],
+					"patching_rect" : [ 980.545660581961783, 754.79085020065304, 22.288661122322083, 20.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 252.576576616716693, 51.212786018848419, 22.288661122322083, 20.0 ],
 					"text" : "M"
@@ -9888,7 +9901,7 @@
 					"oncolor" : [ 0.2, 0.2, 0.2, 1.0 ],
 					"outlettype" : [ "int" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 978.545660581961783, 715.79085020065304, 24.0, 24.0 ],
+					"patching_rect" : [ 980.545660581961783, 784.79085020065304, 24.0, 24.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 250.865237739038776, 27.712786018848419, 24.0, 24.0 ],
 					"thickness" : 75.0
@@ -9970,8 +9983,8 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 933.389854013408694, 610.211900987625086, 305.0, 47.0 ],
-					"text" : "TALK channel on input 11: \nGoes to all player outputs and broadcast outputs directly",
+					"patching_rect" : [ 939.389854013408694, 666.698110063076001, 202.950674858976981, 47.0 ],
+					"text" : "TALK channel on input 11: \nGoes to all player mixes, standard mix and broadcast mix",
 					"textcolor" : [ 1.0, 1.0, 1.0, 1.0 ],
 					"textjustification" : 1
 				}
@@ -10247,7 +10260,7 @@
 					"patching_rect" : [ 985.559946687647084, 435.906775951385498, 95.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 278.281890595107086, 357.046118497848511, 65.673139929771423, 22.0 ],
-					"text" : "Artie",
+					"text" : "player-5",
 					"textjustification" : 1
 				}
 
@@ -10262,7 +10275,7 @@
 					"patching_rect" : [ 885.994762339251338, 435.906775951385498, 95.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 210.60299040721543, 357.046118497848511, 65.767827504783952, 22.0 ],
-					"text" : "David",
+					"text" : "player-4",
 					"textjustification" : 1
 				}
 
@@ -10277,7 +10290,7 @@
 					"patching_rect" : [ 782.851905196394114, 435.906775951385498, 95.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 141.304274524216595, 357.046118497848511, 66.48880803544526, 22.0 ],
-					"text" : "Jerry",
+					"text" : "player-3",
 					"textjustification" : 1
 				}
 
@@ -10292,7 +10305,7 @@
 					"patching_rect" : [ 676.131375259075753, 435.906775951385498, 95.0, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 72.815466488771335, 357.046118497848511, 66.673139870166779, 22.0 ],
-					"text" : "Daniel",
+					"text" : "player-2",
 					"textjustification" : 1
 				}
 
@@ -10307,7 +10320,7 @@
 					"patching_rect" : [ 565.252134812218742, 435.906775951385498, 92.333331823348999, 22.0 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 7.334987956749274, 357.046118497848511, 63.480478532022062, 22.0 ],
-					"text" : "Nathaniel",
+					"text" : "player-1",
 					"textjustification" : 1
 				}
 
@@ -11708,7 +11721,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-55", 11 ],
+					"destination" : [ "obj-55", 13 ],
 					"order" : 0,
 					"source" : [ "obj-35", 0 ]
 				}
@@ -11716,7 +11729,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-55", 10 ],
+					"destination" : [ "obj-55", 12 ],
 					"order" : 1,
 					"source" : [ "obj-35", 0 ]
 				}
@@ -11724,7 +11737,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-55", 9 ],
+					"destination" : [ "obj-55", 11 ],
 					"order" : 2,
 					"source" : [ "obj-35", 0 ]
 				}
@@ -11732,7 +11745,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-55", 8 ],
+					"destination" : [ "obj-55", 10 ],
 					"order" : 3,
 					"source" : [ "obj-35", 0 ]
 				}
@@ -11740,7 +11753,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-55", 7 ],
+					"destination" : [ "obj-55", 9 ],
 					"order" : 4,
 					"source" : [ "obj-35", 0 ]
 				}
@@ -11748,7 +11761,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-55", 6 ],
+					"destination" : [ "obj-55", 8 ],
 					"order" : 5,
 					"source" : [ "obj-35", 0 ]
 				}
@@ -11756,7 +11769,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-55", 5 ],
+					"destination" : [ "obj-55", 7 ],
 					"order" : 6,
 					"source" : [ "obj-35", 0 ]
 				}
@@ -11764,7 +11777,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-55", 4 ],
+					"destination" : [ "obj-55", 6 ],
 					"order" : 7,
 					"source" : [ "obj-35", 0 ]
 				}
@@ -11772,7 +11785,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-55", 3 ],
+					"destination" : [ "obj-55", 5 ],
 					"order" : 8,
 					"source" : [ "obj-35", 0 ]
 				}
@@ -11780,7 +11793,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-55", 2 ],
+					"destination" : [ "obj-55", 4 ],
 					"order" : 9,
 					"source" : [ "obj-35", 0 ]
 				}
@@ -11788,7 +11801,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-55", 1 ],
+					"destination" : [ "obj-55", 3 ],
 					"order" : 10,
 					"source" : [ "obj-35", 0 ]
 				}
@@ -11796,8 +11809,24 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-55", 0 ],
+					"destination" : [ "obj-55", 2 ],
 					"order" : 11,
+					"source" : [ "obj-35", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-55", 1 ],
+					"order" : 12,
+					"source" : [ "obj-35", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-55", 0 ],
+					"order" : 13,
 					"source" : [ "obj-35", 0 ]
 				}
 
@@ -13027,35 +13056,35 @@
 		"dependency_cache" : [ 			{
 				"name" : "AudioReceive.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/patchers",
-				"patcherrelativepath" : "../../../Documents/Max 8/Packages/AudioMix/patchers",
+				"patcherrelativepath" : "../../Max 8/Packages/AudioMix/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "AudioRecord.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/patchers",
-				"patcherrelativepath" : "../../../Documents/Max 8/Packages/AudioMix/patchers",
+				"patcherrelativepath" : "../../Max 8/Packages/AudioMix/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
-				"name" : "pinter-setup.txt",
-				"bootpath" : "~/Desktop/pinter-combo-spr21",
-				"patcherrelativepath" : "../../pinter-combo-spr21",
+				"name" : "setup.txt",
+				"bootpath" : "~/Documents/GitHub/Jacktrip-Max-Mixer",
+				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "AudioSend.maxpat",
 				"bootpath" : "~/Documents/Max 8/Packages/AudioMix/patchers",
-				"patcherrelativepath" : "../../../Documents/Max 8/Packages/AudioMix/patchers",
+				"patcherrelativepath" : "../../Max 8/Packages/AudioMix/patchers",
 				"type" : "JSON",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "AUMatrixReverb.maxsnap",
 				"bootpath" : "~/Documents/Max 8/Snapshots",
-				"patcherrelativepath" : "../../../Documents/Max 8/Snapshots",
+				"patcherrelativepath" : "../../Max 8/Snapshots",
 				"type" : "mx@s",
 				"implicit" : 1
 			}
@@ -13105,7 +13134,6 @@
 				"default" : 				{
 					"fontname" : [ "Arial" ],
 					"fontface" : [ 1 ],
-					"fontsize" : [ 11.0 ],
 					"bgfillcolor" : 					{
 						"type" : "gradient",
 						"color1" : [ 0.376471, 0.384314, 0.4, 1.0 ],
@@ -13114,7 +13142,8 @@
 						"angle" : 270.0,
 						"proportion" : 0.39
 					}
-
+,
+					"fontsize" : [ 11.0 ]
 				}
 ,
 				"parentstyle" : "",
