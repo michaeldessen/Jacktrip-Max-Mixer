@@ -52,4 +52,4 @@ Having control over one's individual monitor mix is crucial in many kinds of mus
 * a simple interface for a producer to simultaneously monitor the low-latency players' mix and create a broadcast-quality mix using the new jitter buffer feature in JackTrip v1.3
 
 ## Contributors
-Michael Dessen, Matthew Nelson
+Michael Dessen, Matthew Nelson, Omar Costa Hamido
