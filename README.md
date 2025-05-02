@@ -1,3 +1,6 @@
+# No longer current
+This patch hasn't been updated in years because I've since moved on to other tools, but I'm leaving it here for now in case it's useful to anyone. 
+
 # Jacktrip Max Mixer
 
 These [Max](https://cycling74.com/products/max) patches provide mixing/monitoring functions for a small group of musicians using [JackTrip](https://www.jacktrip.org/index.html) to connect through a self-managed, macOS server. 
